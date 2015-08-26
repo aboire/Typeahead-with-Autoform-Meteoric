@@ -1,11 +1,11 @@
 <template name="autoformTypeahead">
   
     <input class="form-control typeahead" autocomplete="off" spellcheck="off" type="text"
-           data-template="steplr-autoform-typeahead-result" {{atts}}/>
+           data-template="typeahead-result" {{atts}}/>
   
 </template>
 
-<template name="steplr-autoform-typeahead-result">
+<template name="typeahead-result">
     {{#ionItem class="suggest-result"}}
         {{value}}
     {{/ionItem}}
