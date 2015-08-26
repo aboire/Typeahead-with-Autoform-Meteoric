@@ -1,0 +1,20 @@
+<template name="forms">
+
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Form View</h1>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionContent}}
+            <h5>AutoForm with typeahead</h5>
+            {{#autoForm schema='MySchema' id="college-name-form" type="insert"}}
+                {{> afQuickField name='title' type="typeahead" data-source="searchTitle" data-value-key="value"}}
+                <button type="submit" class="button button-block button-positive">Save Post</button>
+            {{/autoForm}}
+            <h5>Only typeahead</h5>
+            <input class="form-control typeahead" name="title" type="text" placeholder="Job Title"
+                   autocomplete="off" spellcheck="off" data-source="searchTitle"/>
+
+        {{/ionContent}}
+    {{/ionView}}
+</template>
